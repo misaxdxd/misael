@@ -43,4 +43,7 @@ public class Producto {
     private Marca idMarca;
     //@NotNull(message = "La unidad de medida del producto es obligatoria")
     private UnidMedida idUnidad;
+
+    public void getIdProducto(Long id) {
+    }
 }
