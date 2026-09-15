@@ -6,6 +6,8 @@ import pe.edu.upeu.sisventas.service.IMarcaService;
 import pe.edu.upeu.sisventas.service.IProductoService;
 import pe.edu.upeu.sisventas.service.IUnidadMedidaService;
 
+//xd
+
 @RequiredArgsConstructor
 public class ProductoController {
     private final IMarcaService ms;
