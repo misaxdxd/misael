@@ -2,7 +2,7 @@ package pe.edu.upeu.sisventas.repository;
 
 import pe.edu.upeu.sisventas.model.UnidMedida;
 
-public class UnidMedidaRepository extends AbstractJpaRepository<UnidMedida, Long>{
+public class UnidadMedidaRepository extends AbstractJpaRepository<UnidMedida, Long>{
     private long sequence=1;
     @Override
     protected Long getId(UnidMedida entity) {

@@ -1,4 +1,4 @@
-package pe.edu.upeu.sysventas.service;
+package pe.edu.upeu.sisventas.service;
 
 import pe.edu.upeu.sisventas.service.ICrudGenericoService;
 import pe.edu.upeu.sisventas.model.UnidMedida;
