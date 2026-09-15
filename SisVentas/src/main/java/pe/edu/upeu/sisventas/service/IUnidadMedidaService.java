@@ -1,0 +1,8 @@
+package pe.edu.upeu.sysventas.service;
+
+import pe.edu.upeu.sisventas.service.ICrudGenericoService;
+import pe.edu.upeu.sisventas.model.UnidMedida;
+
+public interface IUnidadMedidaService extends ICrudGenericoService<UnidMedida, Long> {
+    //List<ComboBoxOption> listarCombobox();
+}

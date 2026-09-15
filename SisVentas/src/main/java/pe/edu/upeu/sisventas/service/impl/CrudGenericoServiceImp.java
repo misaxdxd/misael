@@ -1,6 +1,6 @@
-package pe.edu.upeu.sisventas.Service.impl;
+package pe.edu.upeu.sisventas.service.impl;
 
-import pe.edu.upeu.sisventas.Service.ICrudGenericoService;
+import pe.edu.upeu.sisventas.service.ICrudGenericoService;
 import pe.edu.upeu.sisventas.exception.ModelNotFoundException;
 import pe.edu.upeu.sisventas.repository.ICrudGenericoRepository;
 

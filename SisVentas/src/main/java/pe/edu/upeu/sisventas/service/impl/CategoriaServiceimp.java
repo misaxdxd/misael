@@ -1,6 +1,6 @@
-package pe.edu.upeu.sisventas.Service.impl;
+package pe.edu.upeu.sisventas.service.impl;
 
-import pe.edu.upeu.sisventas.Service.ICategoriaService;
+import pe.edu.upeu.sisventas.service.ICategoriaService;
 import pe.edu.upeu.sisventas.model.Categoria;
 import pe.edu.upeu.sisventas.repository.CategoriaRepository;
 import pe.edu.upeu.sisventas.repository.ICrudGenericoRepository;
@@ -12,8 +12,9 @@ public class CategoriaServiceimp extends CrudGenericoServiceImp<Categoria, Long>
         this.categoriaRepository = categoriaRepository;
     }
 
+
     @Override
     protected ICrudGenericoRepository<Categoria, Long> getRepo() {
-        return null;
+        return categoriaRepository;
     }
 }

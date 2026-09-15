@@ -1,4 +1,4 @@
-package pe.edu.upeu.sisventas.Service;
+package pe.edu.upeu.sisventas.service;
 
 import java.util.List;
 
