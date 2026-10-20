@@ -1,2 +1,1 @@
-# misael
-trabajos de clase
+# POO2026-2-G2
