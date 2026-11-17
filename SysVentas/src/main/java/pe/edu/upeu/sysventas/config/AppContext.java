@@ -36,10 +36,6 @@ public class AppContext {
     private void registrarRepositorios() {
         //registrar(CategoriaRepository.class, new CategoriaRepository());
 
-        registrar(ClienteRepository.class, new ClienteRepository());
-        registrar(VentCarritoRepository.class, new VentCarritoRepository());
-        registrar(VentaDetalleRepository.class, new VentaDetalleRepository());
-        registrar(VentaRepository.class, new VentaRepository());
 
         registrar(CategoriaRepository.class,     new CategoriaRepository());
         registrar(MarcaRepository.class,         new MarcaRepository());
@@ -48,13 +44,18 @@ public class AppContext {
 
         registrar(UsuarioRepository.class, new UsuarioRepository());
 
+        registrar(ClienteRepository.class, new ClienteRepository());
+        registrar(VentCarritoRepository.class, new VentCarritoRepository());
+        registrar(VentaDetalleRepository.class, new VentaDetalleRepository());
+        registrar(VentaRepository.class, new VentaRepository());
+
+
     }
 
     // CAPA 2 — SERVICIOS
     // Cada servicio recibe su repositorio por constructor.
     // Usamos getBean() para buscarlo en el directorio: no creamos nada nuevo.
     private void registrarServicios() {
-
 
         registrar(ICategoriaService.class,    new CategoriaServiceImp(   getBean(CategoriaRepository.class)));
         registrar(IMarcaService.class,        new MarcaServiceImp(       getBean(MarcaRepository.class)));
@@ -71,6 +72,7 @@ public class AppContext {
         registrar(IVentaCarritoService.class, new VentaCarritoServiceImp(getBean(VentCarritoRepository.class)));
         registrar(IVentaDetalleService.class, new VentaDetalleServiceImp(getBean(VentaDetalleRepository.class)));
         registrar(IVentaService.class, new VentaServiceImp( getBean(VentaRepository.class), ds));
+
     }
 
     // CAPA 3 — CONTROLADORES JavaFX
@@ -89,7 +91,16 @@ public class AppContext {
 
         registrar(LoginController.class, new LoginController(getBean(IUsuarioService.class)));
 
-        registrar(VentaController.class,new VentaController());
+        registrar(VentaController.class,
+                new VentaController(
+                        getBean(IProductoService.class),
+                        getBean(IClienteService.class),
+                        getBean(IVentaCarritoService.class),
+                        getBean(IUsuarioService.class),
+                        getBean(IVentaService.class),
+                        getBean(IVentaDetalleService.class),
+                        getBean(ConsultaDNI.class)));
+
 
     }
 

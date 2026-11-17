@@ -22,6 +22,4 @@ public class VentCarrito {
     private int estado;
     private Usuario idUsuario;
     private TipoProducto tipoProducto;
-
-
 }
